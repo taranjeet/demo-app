@@ -32,9 +32,8 @@ def add_data_to_app():
     url = "https://gist.githubusercontent.com/taranjeet/3722cba958f0c0934b18c5e8075ee0e7/raw/791f53ecfd6da035db2aec6a6e705dac4ce42eb2/d1.csv"  # noqa:E501
     response = requests.get(url)
     csv_file = StringIO(response.text)
-    for row in csv.reader(csv_file):
-        if row and row[0] != "url":
-            app.add(row[0], data_type="web_page")
+    for row in csv.reader(csv_file):  
+      app.add(row[0], data_type="pdf")
 
 
 app = mospi_ai()
