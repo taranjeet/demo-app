@@ -33,7 +33,7 @@ def add_data_to_app():
     response = requests.get(url)
     csv_file = StringIO(response.text)
     for row in csv.reader(csv_file):  
-      app.add(row[0], data_type="pdf")
+      app.add(row[0], data_type="pdf_file")
 
 
 app = mospi_ai()
